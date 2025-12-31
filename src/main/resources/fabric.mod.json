@@ -3,28 +3,31 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Rendering Lib",
   "authors": [
-    "Me!"
+    "Eclipse / NEXD_"
   ],
   "contact": {
-    "homepage": "https://stonecutter.kikugie.dev/",
-    "sources": "https://codeberg.org/stonecutter/template-fabric"
+    "issues": "https://github.com/Eclipse-5214/Orion/issues",
+    "sources": "https://github.com/Eclipse-5214/Orion"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/template/icon.png",
+  "license": "LGPL-3.0-or-later",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.example.TemplateMod"
+    "client": [
+      {
+        "value": "co.stellarskys.orion.Orion",
+        "adapter": "kotlin"
+      }
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "orion.mixins.json"
   ],
-  "accessWidener": "template.accesswidener",
   "depends": {
-    "fabricloader": ">=0.17",
-    "minecraft": "${minecraft}"
+    "minecraft": "${minecraft}",
+    "fabric": "*",
+    "fabricloader": ">=0.15.11",
+    "fabric-language-kotlin": "*"
   }
 }
