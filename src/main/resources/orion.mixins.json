@@ -1,9 +1,9 @@
 {
   "required": true,
-  "package": "co.stellarskys.orion",
+  "package": "co.stellarskys.orion.mixin",
   "compatibilityLevel": "${java}",
   "mixins": [
-    "mixin.ExampleMixin"
+    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

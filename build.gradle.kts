@@ -36,6 +36,11 @@ dependencies {
 
     shadow("omnicore".mc(mc))
     shadow("textile".mc(mc))
+
+    api(include("org.lwjgl:lwjgl-nanovg:3.3.3")!!)
+    listOf("windows", "linux", "macos", "macos-arm64").forEach { v ->
+        api(include("org.lwjgl:lwjgl-nanovg:3.3.3:natives-$v")!!)
+    }
 }
 
 loom {
